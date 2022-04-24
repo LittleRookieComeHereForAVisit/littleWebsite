@@ -1,0 +1,10 @@
+@import url("../css/header.css"); 
+@import url("../css/content.css");
+@import url("../css/view.css");
+@import url("../css/slidebar.css");
+@import url("../css/bootstrap.css");
+@import url("../css/reset.css");
+/* body {
+    background-image: url("../images/blibli.png");
+    background-size: cover;
+} */

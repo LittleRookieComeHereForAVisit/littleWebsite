@@ -1,0 +1,96 @@
+#view{
+    width: 91.5%;
+    height: 430px;
+    margin: 0 auto;
+    position: relative;
+}
+#view .rotation{
+    width: 548px;
+    height: 396px;
+    position: relative;
+    overflow: hidden;
+}
+#view .rotation img{
+    width: 548px;
+    height: 396px;
+    position: absolute;
+    left: 548px;
+}
+.prev,
+.next{
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    right: 3%;
+    bottom: 10%;
+    border-radius: 9px;
+    color: #fff;
+    background-color: grey;
+    font-size: 17px;
+    text-align: center;
+    line-height: 27px; 
+}
+.prev{
+    right: 10%;
+} 
+.btns{
+    position: absolute;
+    left: 9px;
+    bottom: 23px;
+    text-align: center;
+} 
+.btns span{
+    padding: 5px;
+    margin: 0 4px;
+    background-color: #fff;
+    border-radius:  50%;
+    font-size: 0;
+}
+.btns span.choose{
+    margin: 0 0 0 5px;
+    padding: 7px;
+    background-color:  #f00;
+} 
+
+#view > div{
+    float: left;
+}
+#view > div.list{  
+    width: 59.5%;
+    height: 430px;
+    margin-left: 1.02%;
+}
+#view > div.list > div{
+    float: left;
+    width: 32.5%;
+    height: 245px;
+}
+#view > div.list > div:not(:last-child):not(:nth-child(3)){
+    margin-right: 10px;
+}
+#view > div.list > div > img{
+    background-size: cover;
+    width: 100%;
+    height: 151px;
+}
+
+#view > div.list > div > p{
+    font-size: 16px;
+    margin: 12px 0 0 0;
+    padding: 0;
+    color: black;
+}
+#view::before {
+    content: "换一换";
+    border: 1px solid #000;
+    font-size: 15px;
+    text-align: center;
+    padding: 26px 10px 0;
+    width: 38px;
+    height: 79px;
+    display: block;
+    position: absolute;
+    right: -49px;
+    border-radius: 10px;
+    
+}

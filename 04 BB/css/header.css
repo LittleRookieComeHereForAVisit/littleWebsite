@@ -1,0 +1,98 @@
+#header {
+    background-image: url(../images/header.png);
+    height: 158px;
+    background-size: cover;
+}
+#header > ul.left > li,#header > div.search{
+    float: left;
+    font-size: 15px;
+    margin: 26px 12px 0 0;
+    /* margin-right: ; */
+    /* padding: 20px auto; */
+    /* background-color: rgba(0, 0, 130, 0.1); */
+} 
+#header > .search:before{
+    content: "";
+    border-radius: 50%;
+    border: 2px solid #202427;
+    position: absolute;
+    top: 8px;
+    width: 13px;
+    height: 14px;
+    right: 17px;
+}
+#header > .search:after{
+    content: "";
+    border: 1px solid #202427;
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    height: 6px;
+    transform: rotate(-45deg);
+}
+#header > ul.left > span{
+    margin: 20px 5px 0 18px;
+    float: left;
+    padding: 12px;
+    background-image: url(../images/./log.png);
+} 
+#header > ul.left > li > span{ 
+    float: left;
+    padding: 7px;
+    margin: 1px 6px 0 12px;
+    background-image: url(../images/./log.png);
+}
+#header > ul.left li:last-child{
+    margin-right: 29px;
+}
+#header > div.search {
+    width: 504px;
+    margin: 17px 25px 0 9px;
+    position: relative;
+} 
+#header > img.head {
+    padding: 21px;
+    margin: 12px 14px 0 6px;;
+    /* background-color: aqua;  */
+    background-image: url(../images/a1.png) ;
+    background-size: cover;
+    float: left;
+}
+#header > div.right > div{
+    float: left;
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 45px;
+    height: 52px;
+    margin:14px 5px 0 0;
+}
+#header > div.right > div > img{
+    background-image: url(../images/a1.png) ;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+#header > div.right > div > p{
+    font-size: 12px;
+    margin-top: 3px;
+}
+#header > div.right > div:last-child{
+    width: 48px;
+}
+#header > div.right > div > p:last-child{
+    font-size: 12px;
+    margin: 3px 0 0 -1px;
+}
+#header > .btn{
+    width: 92px;
+    height: 33px;
+    margin: 17px 0 0 13px;
+    background-color: #f98cae;
+    float: left;
+    font-size: 14px;
+}
+#header > .btn span{
+    font-size: 14px;
+    margin: 3px 2px 0 0;
+}

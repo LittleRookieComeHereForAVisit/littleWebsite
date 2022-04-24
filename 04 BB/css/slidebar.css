@@ -1,0 +1,32 @@
+#sidebar{
+    position:fixed;
+    right: 50%;
+    bottom: 90px;
+    margin-right: -745px;
+}
+#sidebar > div{
+    display: block;
+    border: 1px solid #fff; 
+    text-align: center;
+    width: 40px;
+    height: 41px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #252526;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 7px 2px 0;
+}
+#sidebar > div:first-child{
+   
+    height: 56px;
+    margin-bottom: 5px;
+}
+#sidebar > div:nth-child(2){
+    height: 57px;
+    margin-bottom: 5px;
+}
+#sidebar > div > span{
+    padding-bottom: 9px;
+    font-size: 22px;
+}

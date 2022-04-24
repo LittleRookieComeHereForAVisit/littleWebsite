@@ -1,0 +1,91 @@
+#content{
+    height: 108px;
+    width: 92%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#content > div{   
+    float: left;
+}
+#content > div.left > div{
+    float: left;
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+    /* margin: 2px 0 0; */
+}
+#content > div.left{
+    /* background-color: aqua; */
+    width: 15.9%;
+    margin:19px 0 0;
+}
+#content > div.left > div > img{
+    background-size: cover;
+    width: 52px;
+    height: 48px;
+    padding-left: 4px;
+    margin-right: 18px;
+}
+#content > div.left > div > p{
+    font-size: 13px;
+    margin: 7px 0 0 -16px;
+}
+#content div.right{
+    width: 64.7%;
+    margin: 0 auto;
+}
+#content > div.right > div{
+    overflow: hidden;
+    margin-right: -1%;
+}
+#content > div.right > div > button{
+    float: left;
+    width: 8%;
+    /* height: 10%; */
+    background-color: green;
+    margin: 2.4% 1.07% 1% 0;;
+    font-size:  14px;
+    background-color: #f4f4f4;
+    color: #252526;
+    border-radius: 9px;
+    line-height: 24px;
+    text-align: center;
+}
+#content > div.right > div > button:nth-child(11)~button{
+    margin: 0 1.07% 0% 0;
+}
+#content > div.right > div > button:last-child > span{
+    font-size: 9px;
+    padding: 0 0 0 4px;
+    color: #252526;
+}
+/* #content > div.right > ul >li {
+
+} */
+#content div.split{
+    margin: 22px 1.2% 0 1.9%;
+    height: 62%;
+    border: 1px solid #252526;
+}
+#content div.slide{
+    width: 16%;
+}
+#content div.slide > div{
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    color: #252526;
+    font-size: 15px;
+    margin-top: 21px;
+}
+#content div.slide > div:not(:last-child):not(:nth-child(3)){
+    margin-right: 20.04px;
+}
+#content div.slide > :not(div:nth-child(3)~div){
+    margin-top: 27px;
+}
+
+#content div.slide > div > span{ 
+    font-size: 15px;
+    padding: 0 6px 0 0;
+}

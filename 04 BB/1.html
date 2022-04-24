@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .list{
+            width: 560px;
+            height: 300px;
+            margin: 10px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .list img{
+            width: 560px;
+            height: 300px;
+            position: absolute;
+            left: 560px;
+        }
+        .prev,
+        .next{
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            top: 50%;
+            margin-top: -25px;
+            color: #fff;
+            background-color: rgba(0,0,0,0.7);
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px; 
+        }
+        .prev{
+            left: 0;
+        }
+        .next{
+            right: 0;
+        }
+        .btns{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            text-align: center;
+        } 
+        .btns span{
+            padding: 6px;
+            margin: 0 6px;
+            background-color: #fff;
+            border-radius:  50%;
+            font-size: 0;
+        }
+        .btns span.choose{
+            background-color:  #f00;
+        } 
+    </style>
+</head>
+<body>
+    <div class="list">
+        <img src="./images/0.png" alt="picture0">
+        <img src="./images/1.png" alt="picture1">
+        <img src="./images/2.png" alt="picture2">
+        <img src="./images/3.png" alt="picture3">
+        <img src="./images/4.png" alt="picture4">
+        <div class="btns">
+            <span class="choose"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="prev">&lt;</div>
+        <div class="next">&gt;</div>
+    </div>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script>
+        var imgs = $('.list img');
+        var spans = $('.btns span');
+        var index = 0;
+        var timebar;
+        imgs.eq(index).css('left',0);
+
+        function startInterval(){
+            timebar = setInterval(change,3000);
+        }
+        startInterval();
+        function change(fn){
+            var num = 0;
+            function end(){
+                num++;
+                if(num === 2 && fn)
+                    fn();
+                
+            }
+            imgs.eq(index).stop(true).animate({left:-560},500,end);
+            index++;
+            if(index >= 5){
+                index = 0;
+            }
+            dealFn(end);
+        }
+        function dealFn(end){
+            imgs.eq(index).css('left',560).stop(true).animate({left: 0},500,end);
+            
+            spans   
+                .eq(index).addClass('choose')
+                .siblings().removeClass('choose');
+        }
+
+        $('.next').click(function(){
+            clearInterval(timebar);
+            change(startInterval);
+        })
+        $('.prev').click(function(){
+            clearInterval(timebar);
+            var num = 0;
+            function end(){
+                num++;
+                if(num === 2 )
+                    startInterval();
+            }
+            imgs.eq(index).stop(true).animate({left: 560},500,end);
+            index--;
+            if(index < 0){
+                index = 4;
+            }
+            imgs.eq(index).css('left',-560).stop(true).animate({left:0},500,end)
+            spans   
+                .eq(index).addClass('choose')
+                .siblings().removeClass('choose');
+        })
+    </script>
+</body>
+</html>
